@@ -5,7 +5,7 @@
       
     $user = "doubleq2"; // replace with the mysql username  
       
-    $pass = "SR71blackbird(!91"; // replace with the mysql password  
+    $pass = ""; // replace with the mysql password  
       
     $db_name = "twaft_";  
       
