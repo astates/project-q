@@ -1,0 +1,9 @@
+#main{
+	position: relative;
+	color: white;
+	top: 200px;;
+	left: 1px;
+	right: 1px;
+	border: solid red 1px;
+	background-color: #000000;
+}

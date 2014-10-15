@@ -1,0 +1,33 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www.)?mvprogramming.com$
+RewriteCond %{REQUEST_URI} !^/nyn/
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /nyn/$1
+
+# Change yourdomain.com to be your primary domain again. 
+# Change 'subfolder' to be the folder you will use for your primary domain 
+# followed by / then the main file for your site, index.php, index.html, etc.
+RewriteCond %{HTTP_HOST} ^(www.)?mvprogramming.com$ 
+RewriteRule ^(/)?$ index.php [L]
+RewriteRule ^(home/)?$ index.php [L]
+
+
+RewriteRule ^(about/)?$ includes/php/about.php [L]
+RewriteRule ^(contact/)?$ includes/php/contact.php [L]
+RewriteRule ^(faq/)?$ includes/php/faq.php [L]
+RewriteRule ^(reseller/)?$ includes/php/reseller.php [L]
+RewriteRule ^(subscriptions/)?$ includes/php/subscriptions.php [L]
+RewriteRule ^(create_a_test/)?$ includes/php/create_a_test.php [L]
+RewriteRule ^(sample_test/)?$ includes/php/sample_test.php [L]
+RewriteRule ^(thank_you_contact_form/)?$ includes/php/thank_you_contact_form.php [L]
+RewriteRule ^(login/)?$ includes/php/login.php [L]
+RewriteRule ^(logout/)?$ includes/php/logout.php [L]
+RewriteRule ^(signup/)?$ includes/php/signup.php [L]
+
+## end of htaccess file
+
+ErrorDocument 404 /includes/php/404_handler.php

@@ -1,0 +1,21 @@
+html, body
+{
+	padding:0px;
+	margin:0px;
+	background-color: tan;}
+
+div.main_container
+{
+	width:980px;
+	margin:auto;
+	background-color: white;
+} 
+nav ul li
+{
+	display:inline;
+}
+header
+{
+	height:150px;
+	background-color:lightblue;
+}

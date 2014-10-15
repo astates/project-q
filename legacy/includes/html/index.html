@@ -1,0 +1,24 @@
+<?php
+require_once('library/session_class.php');
+$session = new session_class();
+?>
+<link rel="stylesheet" href="/includes/css/main.css"></style>
+<div id="main">
+<title>My Index File</title>
+
+<h1>Welcome to the index.html File</h1>
+<p>We are going to create a new object by loading the object into memory. with this line<br>
+<i style="color: yellow;">$user = $session->loadThisClass('library/user_class.php','user_class',__FILE__,__LINE__);</i><br>
+<?php
+$user = $session->loadThisClass('library/user_class.php','user_class',__FILE__,__LINE__);
+?><br>
+we are now going to perform a lookup for a username from the email address supplied using this line<br>
+<i style="color: yellow;">$session->debug->display(($user->getUserNameFromEmailAddress('test@netpass.com')));</i><br>
+The above line will have output based on the findings.
+<?php
+$session->debug->display(($user->getUserNameFromEmailAddress('test@netpass.com')));
+?><br>
+We are now going to show the footer placement, by using a lot of &lt;br>'s.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+End of &ltBR>'s
+</div>
